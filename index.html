@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado do Canhamo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        .header-container {
+            background: linear-gradient(135deg, #075018 0%, #000c00 100%);
+            padding: 40px 20px;
+            color: rgb(243, 243, 243);
+            text-align: center;
+        }
+
+        .header-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header-container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: white;
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #0c7425;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #555;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        section ul li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        section ul li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* CTA Button */
+        .button-container {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #075018 0%, #000c00 100%);
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            background-color: #ffc107;
+            color: #000;
+            font-size: 1.4em;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: min(90%, 400px);
+        }
+
+        .cta-button:hover {
+            background-color: #ffcd39;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Preço e Garantia */
+        .price-guarantee {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .price {
+            font-size: 2.5em;
+            color: #28a745;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .guarantee {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container h1 {
+                font-size: 2em;
+            }
+
+            .header-container p {
+                font-size: 1em;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .price {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container h1 {
+                font-size: 1.6em;
+            }
+
+            .header-container p {
+                font-size: 0.9em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section p {
+                font-size: 0.9em;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .price {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="video-container">
+            <h1>Mercado do Cânhamo</h1>
+            <iframe src="https://www.youtube.com/embed/asftbLZocQU" allowfullscreen></iframe>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Do problema para a solução</h2>
+            <p>🌱 Transforme a Cannabis em uma oportunidade de vida — e de negócio.</p>
+            <p>📢 O futuro do agronegócio já começou.</p>
+            <p>Enquanto alguns ainda veem a cannabis com desconfiança, os visionários estão abrindo caminhos, construindo negócios e mudando suas vidas.</p>
+            <p>Você quer assistir de fora ou fazer parte dessa transformação?</p>
+        </section>
+
+        <section>
+            <h2>Este Curso É Pra Você Que:</h2>
+            <ul>
+                <li>Quer entender como o mercado da cannabis realmente funciona</li>
+                <li>Deseja desmistificar tabus e enxergar a planta como um ativo de valor</li>
+                <li>Busca oportunidades reais de negócio, mesmo começando do zero</li>
+                <li>Está pronto para entrar em um setor inovador, com alto potencial de crescimento</li>
+            </ul>
+        </section>
+
+        <div class="button-container">
+            <button class="cta-button" onclick="redirectToKiwifi()">
+                🔽 QUERO ME INSCREVER AGORA
+            </button>
+        </div>
+        
+        <section>
+            <h2>O que você vai aprender:</h2>
+            <p>Você vai entender desde as origens da proibição até as aplicações medicinais, industriais e comerciais da cannabis no Brasil e no mundo.</p>
+            <p>Vai descobrir como empreender, investir, se posicionar legalmente e criar valor em um mercado em expansão, de forma ética, segura e conectada com o futuro.</p>
+            <p>Tudo de forma acessível, objetiva e sem enrolação — para que você saia do curso com clareza, direção e atitude.</p>
+        </section>
+
+        <section>
+            <h2>Por que este curso é diferente?</h2>
+            <ul>
+                <li>Foco total na ação, não só na teoria</li>
+                <li>Conteúdo atualizado e alinhado com o cenário real do Brasil</li>
+                <li>Conexão com tendências, oportunidades e soluções que estão mudando o jogo</li>
+                <li>Uma abordagem que une conhecimento, estratégia e propósito</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Você está diante da maior oportunidade da sua vida. Vai deixar passar?</h2>
+            <p>Enquanto o mundo acelera, quem se antecipa lucra, cresce e lidera.</p>
+            <p>Chegou a sua vez de virar o jogo — e fazer parte do futuro do agronegócio.</p>
+            <p>Garanta sua vaga agora e comece sua jornada no mercado da cannabis.</p>
+        </section>
+
+        <div class="button-container">
+            <button class="cta-button" onclick="redirectToKiwifi()">
+                🔽 QUERO ME INSCREVER AGORA
+            </button>
+        </div>
+    </main>
+
+    <script>
+        function redirectToKiwifi() {
+            window.location.href = "https://pay.kiwify.com.br/abTXRGF";
+        }
+    </script>
+</body>
+</html>
